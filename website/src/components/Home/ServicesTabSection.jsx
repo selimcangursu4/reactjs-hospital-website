@@ -5,10 +5,18 @@ import BurunEstetigi from "../../assets/burun-logosu-vektoru_535345-2468.avif";
 import BoobsAsthetic from "../../assets/meme-estetigi.jpg";
 import PlasticSurgery from "../../assets/plastic-surgery-icon-beauty-procedure-260nw-2583158219.webp";
 import DentalAsthetic from "../../assets/dis-estetigi.png";
+import Prize1 from "../../assets/odul1.jpg";
+import Prize2 from "../../assets/odul2.jpg";
+import Prize3 from "../../assets/odul3.jpg";
+import Prize4 from "../../assets/odul4.jpg";
+import Prize5 from "../../assets/odul5.jpg";
+import Prize6 from "../../assets/odul6.jpg";
 import { services } from "../../home-contact";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
 
 const ServicesTabSection = () => {
-const [mainContent, setMainContent] = useState();
+  const [mainContent, setMainContent] = useState(services[0].description);
 
   const handleHairTransplant = () => {
     setMainContent(services[0].description);
@@ -117,6 +125,35 @@ const [mainContent, setMainContent] = useState();
           </button>
         </div>
         <div className="mt-5">{mainContent}</div>
+        <div className="mt-10">
+          <Splide
+            options={{
+              type: "loop", // loop, fade, slide vs.
+              perPage: 5, // sayfa başına gösterilecek slide
+              autoplay: true, // otomatik kaydırma
+              gap: "1rem", // slide arası boşluk
+            }}
+          >
+            <SplideSlide>
+              <img className="w-20" src={Prize1} alt="Slide 1" />
+            </SplideSlide>
+            <SplideSlide>
+              <img className="w-20" src={Prize2} alt="Slide 2" />
+            </SplideSlide>
+            <SplideSlide>
+              <img className="w-20" src={Prize3} alt="Slide 3" />
+            </SplideSlide>
+            <SplideSlide>
+              <img className="w-20" src={Prize4} alt="Slide 4" />
+            </SplideSlide>
+            <SplideSlide>
+              <img className="w-20" src={Prize5} alt="Slide 5" />
+            </SplideSlide>
+            <SplideSlide>
+              <img className="w-20" src={Prize6} alt="Slide 6" />
+            </SplideSlide>
+          </Splide>
+        </div>
       </div>
       <div className="w-full md:w-[30%] flex justify-center px-10">
         <div className="bg-white/50 backdrop-blur-xl shadow-sm border border-gray-600 rounded-2xl p-8 w-full max-w-md">

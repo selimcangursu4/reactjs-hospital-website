@@ -4,15 +4,15 @@ import "@splidejs/splide/dist/css/splide.min.css";
 
 const CommentsVideo = () => {
   const videos = [
-    "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "https://www.youtube.com/embed/3JZ_D3ELwOQ",
-    "https://www.youtube.com/embed/tgbNymZ7vqY",
-    "https://www.youtube.com/embed/VIDEO_ID4",
+    "https://www.youtube.com/embed/#",
+    "https://www.youtube.com/embed/#",
+    "https://www.youtube.com/embed/#",
+    "https://www.youtube.com/embed/#",
   ];
 
   return (
     <section className='w-full flex flex-col bg-gray-50 p-10'>
-      <h3 className='text-3xl font-semibold'>XYZ Estetik Deneyimleri</h3>
+      <h3 className='text-2xl text-gray-700 font-semibold'>XYZ Estetik Müşteri Deneyimleri</h3>
       <div className='mt-3'>
         <Splide
           options={{

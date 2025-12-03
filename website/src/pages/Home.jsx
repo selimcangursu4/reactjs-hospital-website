@@ -4,6 +4,8 @@ import ServicesTabSection from '../components/Home/ServicesTabSection'
 import BeforeAfter from '../components/Home/BeforeAfter'
 import CommentsVideo from '../components/Home/CommentsVideo'
 import OrderServiceSection from '../components/Home/OrderServiceSection'
+import WebformSection from '../components/WebformSection'
+import AboutSection from '../components/Home/AboutSection'
 const Home = () => {
   return (
     <>
@@ -12,6 +14,8 @@ const Home = () => {
       <BeforeAfter/>
       <CommentsVideo/>
       <OrderServiceSection/>
+      <WebformSection/>
+      <AboutSection/>
     </>
   )
 }

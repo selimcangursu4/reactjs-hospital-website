@@ -13,7 +13,9 @@ export const services = [
           ekilir.
         </p>
 
-        <h2 className="text-xl font-semibold text-gray-700">Saç Ekimi Nasıl Yapılır?</h2>
+        <h2 className="text-xl font-semibold text-gray-700">
+          Saç Ekimi Nasıl Yapılır?
+        </h2>
         <p>
           Saç ekimi operasyonu; greft toplama, kanal açma ve greft ekimi olmak
           üzere üç aşamada gerçekleşir. Günümüzde robotik saç cerrahisi, safir
@@ -55,7 +57,9 @@ export const services = [
           faktörler saç dökülmesine neden olabilir.
         </p>
 
-        <h2 className="text-xl font-semibold text-gray-700">Popüler Saç Tedavileri</h2>
+        <h2 className="text-xl font-semibold text-gray-700">
+          Popüler Saç Tedavileri
+        </h2>
 
         <ul className="list-disc pl-6 space-y-1">
           <li>Growth Factor Tedavisi</li>
@@ -82,7 +86,9 @@ export const services = [
     name: "Burun Estetiği",
     description: (
       <div className="space-y-4">
-        <h1 className="text-2xl font-semibold text-gray-700">Burun Estetiği (Rinoplasti)</h1>
+        <h1 className="text-2xl font-semibold text-gray-700">
+          Burun Estetiği (Rinoplasti)
+        </h1>
 
         <p>
           Burun estetiği; görünüm kaygıları veya nefes alma problemleri
@@ -145,14 +151,18 @@ export const services = [
     name: "Plastik Cerrahi",
     description: (
       <div className="space-y-4">
-        <h1 className="text-2xl font-semibold text-gray-700">Plastik Cerrahi</h1>
+        <h1 className="text-2xl font-semibold text-gray-700">
+          Plastik Cerrahi
+        </h1>
 
         <p>
           Plastik cerrahi; estetik görünümü iyileştiren veya doku kaybını onaran
           ameliyatlardan oluşur.
         </p>
 
-        <h2 className="text-xl font-semibold text-gray-700">Sık Uygulanan Alanlar</h2>
+        <h2 className="text-xl font-semibold text-gray-700">
+          Sık Uygulanan Alanlar
+        </h2>
 
         <ul className="list-disc pl-6 space-y-1">
           <li>Meme Estetiği</li>
@@ -201,7 +211,6 @@ export const services = [
     ),
   },
 ];
-
 export const orderServices = [
   {
     id: 1,
@@ -293,5 +302,35 @@ export const orderServices = [
       "Diyabetik Ayak Tedavisi",
       "Medikal Ayak Bakımı",
     ],
+  },
+];
+export const brances = [
+  {
+    id: "1",
+    img: "https://picsum.photos/200/300",
+    name: "Üsküdar XYZ Estetik Şubesi",
+    address:
+      "The point of using Lorem Ipsum of letters, as opposed to using 'Content here, content here",
+  },
+  {
+    id: "2",
+    img: "https://picsum.photos/200/300",
+    name: "Kadıköy XYZ Estetik Şubesi",
+    address:
+      "The point of using Lorem Ipsum is that it pposed to using 'Content here, content here",
+  },
+  {
+    id: "3",
+    img: "https://picsum.photos/200/300",
+    name: "Beşiktaş XYZ Estetik Şubesi",
+    address:
+      "The point of using Lorem Ipsum is that it has a more-or-less ntent here, content here",
+  },
+  {
+    id: "4",
+    img: "https://picsum.photos/200/300",
+    name: "Nişantaşı XYZ Estetik Şubesi",
+    address:
+      "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,",
   },
 ];

@@ -6,6 +6,7 @@ import CommentsVideo from '../components/Home/CommentsVideo'
 import OrderServiceSection from '../components/Home/OrderServiceSection'
 import WebformSection from '../components/WebformSection'
 import AboutSection from '../components/Home/AboutSection'
+import BrancheSection from '../components/Home/BrancheSection'
 const Home = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Home = () => {
       <OrderServiceSection/>
       <WebformSection/>
       <AboutSection/>
+      <BrancheSection/>
     </>
   )
 }

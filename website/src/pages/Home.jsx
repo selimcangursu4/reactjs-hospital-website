@@ -7,6 +7,7 @@ import OrderServiceSection from '../components/Home/OrderServiceSection'
 import WebformSection from '../components/WebformSection'
 import AboutSection from '../components/Home/AboutSection'
 import BrancheSection from '../components/Home/BrancheSection'
+import FaqSection from '../components/Home/FaqSection'
 const Home = () => {
   return (
     <>
@@ -18,6 +19,8 @@ const Home = () => {
       <WebformSection/>
       <AboutSection/>
       <BrancheSection/>
+      <WebformSection/>
+      <FaqSection/>
     </>
   )
 }

@@ -1,200 +1,143 @@
 import React, { useState } from "react";
-import SacEkimi from "../../assets/sac-ekimi.png";
-import SacTedavisi from "../../assets/sac-tedavisi.jpg";
-import BurunEstetigi from "../../assets/burun-logosu-vektoru_535345-2468.avif";
-import BoobsAsthetic from "../../assets/meme-estetigi.jpg";
-import PlasticSurgery from "../../assets/plastic-surgery-icon-beauty-procedure-260nw-2583158219.webp";
-import DentalAsthetic from "../../assets/dis-estetigi.png";
+import { services } from "../../home-contact";
 import Prize1 from "../../assets/odul1.jpg";
 import Prize2 from "../../assets/odul2.jpg";
 import Prize3 from "../../assets/odul3.jpg";
 import Prize4 from "../../assets/odul4.jpg";
 import Prize5 from "../../assets/odul5.jpg";
 import Prize6 from "../../assets/odul6.jpg";
-import { services } from "../../home-contact";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { motion } from "framer-motion";
 
 const ServicesTabSection = () => {
   const [mainContent, setMainContent] = useState(services[0].description);
 
-  const handleHairTransplant = () => {
-    setMainContent(services[0].description);
+  const handleServiceClick = (index) => {
+    setMainContent(services[index].description);
   };
 
-  const handleHairTreatments = () => {
-    setMainContent(services[1].description);
-  };
-
-  const handleRhinoplasty = () => {
-    setMainContent(services[2].description);
-  };
-
-  const handleBreastAesthetics = () => {
-    setMainContent(services[3].description);
-  };
-
-  const handlePlasticSurgery = () => {
-    setMainContent(services[4].description);
-  };
-
-  const handleDentalAesthetics = () => {
-    setMainContent(services[5].description);
-  };
   return (
-    <section className="w-full flex flex-col md:flex-row justify-between items-start py-20 bg-gray-50">
+    <section
+      className="w-full flex flex-col md:flex-row justify-between items-start py-20 bg-gray-50"
+      aria-label="Hizmetlerimiz"
+    >
       <div className="w-full md:w-[70%] px-10 mb-10 md:mb-0">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-5 bg-gray-800 p-6 rounded-2xl">
-          <button
-            onClick={handleHairTransplant}
-            className="flex flex-col items-center cursor-pointer bg-gray-700 hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
-          >
-            <img
-              src={SacEkimi}
-              alt="sac-ekimi"
-              className="w-16 h-16 object-cover rounded-md mb-2"
-            />
-            <p className="text-white font-medium text-center text-sm">
-              Saç Ekimi
-            </p>
-          </button>
-          <button
-            onClick={handleHairTreatments}
-            className="flex flex-col items-center bg-gray-700 cursor-pointer hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
-          >
-            <img
-              src={SacTedavisi}
-              alt="sac-tedavisi"
-              className="w-16 h-16 object-cover rounded-md mb-2"
-            />
-            <p className="text-white font-medium text-center text-sm">
-              Saç Tedavileri
-            </p>
-          </button>
-          <button
-            onClick={handleRhinoplasty}
-            className="flex flex-col items-center bg-gray-700 cursor-pointer hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
-          >
-            <img
-              src={BurunEstetigi}
-              alt="burun-estetigi"
-              className="w-16 h-16 object-cover rounded-md mb-2"
-            />
-            <p className="text-white font-medium text-center text-sm">
-              Burun Estetiği
-            </p>
-          </button>
-          <button
-            onClick={handleBreastAesthetics}
-            className="flex flex-col items-center bg-gray-700 cursor-pointer hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
-          >
-            <img
-              src={BoobsAsthetic}
-              alt="meme-estetigi"
-              className="w-16 h-16 object-cover rounded-md mb-2"
-            />
-            <p className="text-white font-medium text-center text-sm">
-              Meme Estetiği
-            </p>
-          </button>
-          <button
-            onClick={handlePlasticSurgery}
-            className="flex flex-col items-center bg-gray-700 cursor-pointer hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
-          >
-            <img
-              src={PlasticSurgery}
-              alt="plastik-cerrahi"
-              className="w-16 h-16 object-cover rounded-md mb-2"
-            />
-            <p className="text-white font-medium text-center text-sm">
-              Plastik Cerrahi
-            </p>
-          </button>
-          <button
-            onClick={handleDentalAesthetics}
-            className="flex flex-col items-center bg-gray-700 cursor-pointer hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
-          >
-            <img
-              src={DentalAsthetic}
-              alt="dis-estetigi"
-              className="w-16 h-16 object-cover rounded-md mb-2"
-            />
-            <p className="text-white font-medium text-center text-sm">
-              Diş Estetiği
-            </p>
-          </button>
+          {services.map((service, index) => (
+            <button
+              key={service.id}
+              onClick={() => handleServiceClick(index)}
+              className="flex flex-col items-center cursor-pointer bg-gray-700 hover:bg-gray-600 transition-all rounded-xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1"
+              aria-label={service.name}
+            >
+              <img
+                src={service.image}
+                alt={service.name}
+                className="w-16 h-16 object-cover rounded-md mb-2"
+              />
+              <p className="text-white font-medium text-center text-sm">
+                {service.name}
+              </p>
+            </button>
+          ))}
         </div>
-        <div className="mt-5">{mainContent}</div>
-        <div className="mt-10">
+
+        <article className="mt-5 text-gray-700" aria-live="polite">
+          {mainContent}
+        </article>
+
+        <div className="mt-10" aria-label="Ödüllerimiz">
           <Splide
             options={{
-              type: "loop", // loop, fade, slide vs.
-              perPage: 5, // sayfa başına gösterilecek slide
-              autoplay: true, // otomatik kaydırma
-              gap: "1rem", // slide arası boşluk
+              type: "loop",
+              perPage: 5,
+              autoplay: true,
+              gap: "1rem",
             }}
           >
-            <SplideSlide>
-              <img className="w-20" src={Prize1} alt="Slide 1" />
-            </SplideSlide>
-            <SplideSlide>
-              <img className="w-20" src={Prize2} alt="Slide 2" />
-            </SplideSlide>
-            <SplideSlide>
-              <img className="w-20" src={Prize3} alt="Slide 3" />
-            </SplideSlide>
-            <SplideSlide>
-              <img className="w-20" src={Prize4} alt="Slide 4" />
-            </SplideSlide>
-            <SplideSlide>
-              <img className="w-20" src={Prize5} alt="Slide 5" />
-            </SplideSlide>
-            <SplideSlide>
-              <img className="w-20" src={Prize6} alt="Slide 6" />
-            </SplideSlide>
+            {[Prize1, Prize2, Prize3, Prize4, Prize5, Prize6].map(
+              (prize, idx) => (
+                <SplideSlide key={idx}>
+                  <img className="w-20" src={prize} alt={`Ödül ${idx + 1}`} />
+                </SplideSlide>
+              )
+            )}
           </Splide>
         </div>
       </div>
-      <div className="w-full md:w-[30%] flex justify-center px-10">
-        <div className="bg-white/50 backdrop-blur-xl shadow-sm border border-gray-600 rounded-2xl p-8 w-full max-w-md">
-          <h3 className="text-2xl text-black mb-6 text-start">
+
+      <aside className="w-full md:w-[30%] flex justify-center px-10">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="bg-white/70 backdrop-blur-xl shadow-lg border border-gray-300 rounded-3xl p-8 w-full max-w-md hover:shadow-2xl transition-shadow duration-500"
+        >
+          <h2 className="text-xl text-gray-700 mb-6 text-start animate-pulse">
             Ücretsiz Uzman Analizi
-          </h3>
+          </h2>
 
-          <form className="flex flex-col gap-4">
-            <input
-              type="text"
-              placeholder="Adınız Soyadınız"
-              className="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-900/40 outline-none"
-            />
+          <form className="flex flex-col gap-5" aria-label="Uzman Analiz Formu">
+            <motion.label whileFocus={{ scale: 1.02 }} className="relative">
+              <span className="sr-only">Adınız Soyadınız</span>
+              <input
+                type="text"
+                placeholder="Adınız Soyadınız"
+                className="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-700 focus:border-blue-700 outline-none shadow-sm transition-all duration-300"
+                required
+              />
+            </motion.label>
 
-            <input
-              type="email"
-              placeholder="E-Posta Adresi"
-              className="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-900/40 outline-none"
-            />
+            <motion.label whileFocus={{ scale: 1.02 }} className="relative">
+              <span className="sr-only">E-Posta Adresi</span>
+              <input
+                type="email"
+                placeholder="E-Posta Adresi"
+                className="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-700 focus:border-blue-700 outline-none shadow-sm transition-all duration-300"
+                required
+              />
+            </motion.label>
 
-            <input
-              type="tel"
-              placeholder="Telefon Numarası"
-              className="p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-900/40 outline-none"
-            />
+            <motion.label whileFocus={{ scale: 1.02 }} className="relative">
+              <span className="sr-only">Telefon Numarası</span>
+              <input
+                type="tel"
+                placeholder="Telefon Numarası"
+                className="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-700 focus:border-blue-700 outline-none shadow-sm transition-all duration-300"
+                required
+              />
+            </motion.label>
 
-            <select className="p-3 rounded-md border border-gray-300 text-gray-700 focus:ring-2 focus:ring-blue-900/40 outline-none">
-              <option value="">İlgilendiğiniz Tedavi</option>
-              <option value="burun">Burun Estetiği</option>
-              <option value="meme">Meme Estetiği</option>
-              <option value="yuz">Yüz Estetiği</option>
-              <option value="sac">Saç Ekimi</option>
-              <option value="diger">Diğer</option>
-            </select>
+            <motion.label whileFocus={{ scale: 1.02 }} className="relative">
+              <span className="sr-only">İlgilendiğiniz Tedavi</span>
+              <select
+                className="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-700 focus:border-blue-700 outline-none shadow-sm transition-all duration-300"
+                required
+              >
+                <option value="">İlgilendiğiniz Tedavi</option>
+                <option value="burun">Burun Estetiği</option>
+                <option value="meme">Meme Estetiği</option>
+                <option value="yuz">Yüz Estetiği</option>
+                <option value="sac">Saç Ekimi</option>
+                <option value="diger">Diğer</option>
+              </select>
+            </motion.label>
 
-            <button className="bg-gray-700 hover:bg-gray-800 text-white p-3 rounded-md text-sm font-medium shadow-md transition-all">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              className="bg-gray-700 hover:bg-graysc-800 text-white p-2 rounded-md text-md shadow-md transition-all duration-300"
+            >
               Gönder
-            </button>
+            </motion.button>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </aside>
     </section>
   );
 };

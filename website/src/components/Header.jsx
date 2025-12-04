@@ -45,7 +45,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <a
             href="#"
-            className="hidden md:block bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow hover:bg-blue-950 transition-all"
+            className="hidden md:block bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow hover:bg-gray-800 transition-all"
           >
             Hemen Ön Bilgi Al
           </a>

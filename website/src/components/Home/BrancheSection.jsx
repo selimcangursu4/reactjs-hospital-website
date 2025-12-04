@@ -11,7 +11,7 @@ const BrancheSection = () => {
     >
       <h2
         id="branches-title"
-        className="text-xl md:text-xl text-gray-700 font-bold mb-6 text-center"
+        className="text-xl md:text-xl text-gray-700 font-bold mb-6 text-start"
       >
         XYZ Estetik Şubelerimiz
       </h2>

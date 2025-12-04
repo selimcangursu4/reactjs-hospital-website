@@ -16,7 +16,7 @@ const FaqSection = () => {
       className="w-full flex flex-col bg-gray-50 p-10 gap-6"
       aria-labelledby="faq-title"
     >
-      <h2 id="faq-title" className="text-xl text-gray-800 font-bold">
+      <h2 id="faq-title" className="text-xl text-gray-700 font-semibold">
         Sıkça Sorulan Sorular (XYZ Estetik)
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

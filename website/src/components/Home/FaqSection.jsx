@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faqSection } from "../../home-contact";
+import { faqSection } from "../../homeData";
 
 const FaqSection = () => {
   const [activeTab, setActiveTab] = useState(faqSection[0].category);

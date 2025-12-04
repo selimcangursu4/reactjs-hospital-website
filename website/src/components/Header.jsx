@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
   return (
-    <header className="w-full bg-gray-50 shadow-md fixed top-0 left-0 z-50">
+    <header className="w-full bg-gray-50 shadow-md top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-2">
         <div className="flex items-center gap-2">
           <img src="" alt="logo" className="w-12 h-12 object-contain" />

@@ -1,6 +1,6 @@
 import React from 'react';
 import BrancesCard from '../BrancesCard';
-import { brances } from '../../home-contact';
+import { brances } from '../../homeData';
 import { motion } from 'framer-motion';
 
 const BrancheSection = () => {

@@ -10,8 +10,6 @@ import BrancesSamsun from "./assets/sube2.jpg";
 import BrancesIzmir from "./assets/sube3.jpg";
 import BrancesEskisehir from "./assets/sube1.jpg";
 
-
-
 export const services = [
   {
     id: "1",

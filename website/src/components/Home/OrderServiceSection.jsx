@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceCard from '../ServiceCard';
-import { orderServices } from '../../home-contact';
+import { orderServices } from '../../homeData';
 
 const OrderServiceSection = () => {
   return (

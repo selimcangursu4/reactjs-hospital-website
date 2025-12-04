@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { services } from "../../home-contact";
+import { services } from "../../homeData";
 import Prize1 from "../../assets/odul1.jpg";
 import Prize2 from "../../assets/odul2.jpg";
 import Prize3 from "../../assets/odul3.jpg";
@@ -42,11 +42,9 @@ const ServicesTabSection = () => {
             </button>
           ))}
         </div>
-
-        <article className="mt-5 text-gray-700" aria-live="polite">
+        <article className="mt-5 text-gray-700 h-auto" aria-live="polite">
           {mainContent}
         </article>
-
         <div className="mt-10" aria-label="Ödüllerimiz">
           <Splide
             options={{

@@ -32,8 +32,6 @@ const HeroSection = () => {
           Detaylı Bilgi Al <FaArrowAltCircleRight />
         </a>
       </div>
-
-      {/* İstatistik Kartı */}
       <div className="absolute bottom-10 right-10">
         <div className="bg-white/95 backdrop-blur-md shadow-2xl rounded-xl px-8 py-5 flex flex-row items-center gap-10">
           <div className="flex items-center gap-3">
